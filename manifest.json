@@ -1,0 +1,16 @@
+{
+  "name": "Re-Late · Fisioterapia",
+  "short_name": "Re-Late",
+  "description": "Gestión clínica y ejercicio terapéutico. Autor: Miguel Ángel Layunta López.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f766e",
+  "theme_color": "#0f766e",
+  "lang": "es",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
