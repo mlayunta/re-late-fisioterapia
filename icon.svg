@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192" role="img" aria-label="Re-Late · Fisioterapia">
+  <title>Re-Late · Fisioterapia</title>
+  <defs>
+    <linearGradient id="relateGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="192" height="192" rx="42" fill="url(#relateGrad)"/>
+
+  <!-- Mano -->
+  <g fill="#ffffff" opacity="0.96">
+    <rect x="68"  y="52" width="15" height="56" rx="7.5"/>
+    <rect x="87"  y="44" width="15" height="64" rx="7.5"/>
+    <rect x="106" y="48" width="15" height="60" rx="7.5"/>
+    <rect x="125" y="58" width="15" height="50" rx="7.5"/>
+    <rect x="64"  y="96" width="76" height="58" rx="22"/>
+    <rect x="46"  y="104" width="16" height="44" rx="8" transform="rotate(-28 54 126)"/>
+  </g>
+
+  <!-- Corazón dentro de la palma -->
+  <path d="M102 143s-21-13-21-27a11.5 11.5 0 0 1 21-6 11.5 11.5 0 0 1 21 6c0 14-21 27-21 27z" fill="#0f766e"/>
+
+  <!-- Trazo ECG dentro del corazón (rehabilitación cardiaca) -->
+  <path d="M89 123h6l3-7 4 13 3-8 2 2h7"
+        fill="none" stroke="#ffffff" stroke-width="2.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

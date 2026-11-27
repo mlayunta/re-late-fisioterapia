@@ -1,0 +1,93 @@
+/* Re-Late · Fisioterapia — capa de mejoras v2.0.0 */
+:root{
+  --rl-teal:#0f766e; --rl-ink:#0f172a; --rl-card:#fff;
+  --rl-warn:#92400e; --rl-danger:#991b1b; --rl-focus:#0d9488;
+}
+:where(a,button,input,select,textarea,[tabindex="-1"],[role="button"],summary,.trp,.nav-btn,.vtab,.ppnav,.tabbtn):focus-visible{
+  outline:3px solid var(--rl-focus)!important;outline-offset:2px!important;border-radius:6px;
+}
+:where(nav button,nav a){min-height:42px}
+:where(button)[aria-label]{min-width:40px;min-height:40px}
+.skip:focus{outline:3px solid #0d9488!important}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+/* ===== MODO LEGIBLE (Alt+F) ===== */
+html.rl-legible body:not(.dark) :where(.text-slate-400,.text-slate-300){color:#475569!important}
+html.rl-legible :where(.text-\[10px\]){font-size:.78rem!important}
+html.rl-legible :where(.text-\[11px\]){font-size:.84rem!important}
+html.rl-legible :where(.text-xs){font-size:.85rem!important}
+html.rl-legible :where(.badge){font-size:.75rem;padding:.2rem .55rem}
+html.rl-legible :where(input,select,textarea){font-size:1rem!important;min-height:44px}
+html.rl-legible :where(td,th){padding-top:.4rem!important;padding-bottom:.4rem!important}
+
+/* ===== ALTO CONTRASTE (Alt+A) ===== */
+html.rl-alto-contraste body:not(.dark){background:#fff!important;color:#000!important}
+html.rl-alto-contraste :where(.card){border:2px solid #000!important}
+html.rl-alto-contraste :where(a,.underline){text-decoration:underline!important}
+html.rl-alto-contraste :where(input,select,textarea){border:2px solid #000!important}
+html.rl-alto-contraste :where(.badge){border:1px solid currentColor}
+html.rl-alto-contraste :where(button){outline:2px solid currentColor;outline-offset:-2px}
+
+/* ===== ficha de evidencia ===== */
+#rl-evi{
+  position:absolute;z-index:2147483000;max-width:390px;display:none;background:var(--rl-card);
+  color:var(--rl-ink);border:1px solid #cbd5e1;border-left:5px solid var(--rl-teal);
+  border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.45;
+  box-shadow:0 14px 34px rgba(15,23,42,.2);
+}
+#rl-evi.rl-on{display:block}
+#rl-evi h4{margin:0 0 6px;font-size:13px;font-weight:700}
+#rl-evi .rl-f{font-family:ui-monospace,Menlo,Consolas,monospace;background:#f1f5f9;padding:6px 8px;border-radius:8px;margin:6px 0;white-space:pre-wrap}
+#rl-evi .rl-s{color:#334155;font-size:12px;margin-top:4px}
+#rl-evi .rl-l{color:var(--rl-warn);font-size:12px;margin-top:4px}
+body.dark #rl-evi{background:#16213a;color:#e2e8f0;border-color:#2b3a55}
+body.dark #rl-evi .rl-f{background:#0b1220;color:#99f6e4}
+body.dark #rl-evi .rl-s{color:#94a3b8}
+
+/* ===== avisos ===== */
+#rl-toasts{position:fixed;left:12px;bottom:12px;z-index:2147483001;display:flex;flex-direction:column;gap:8px;max-width:min(92vw,430px)}
+.rl-toast{background:var(--rl-ink);color:#fff;border-radius:10px;padding:10px 14px;font-size:13px;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.rl-toast.rl-warn{background:#b45309}.rl-toast.rl-danger{background:#b91c1c}.rl-toast.rl-ok{background:var(--rl-teal)}
+body.dark .rl-toast{background:#16213a;border:1px solid #2b3a55}
+
+/* ===== banners y chips ===== */
+.rl-banner{border-radius:10px;padding:9px 12px;font-size:12.5px;margin-bottom:14px;line-height:1.5}
+.rl-banner.rev{background:#fffbeb;border:1px solid #fcd34d;border-left:5px solid #b45309;color:#78350f}
+.rl-banner.info{background:#f0fdfa;border:1px solid #99f6e4;border-left:5px solid var(--rl-teal);color:#115e59}
+body.dark .rl-banner.rev{background:#3a2205;color:#fde68a;border-color:#7c4a03}
+body.dark .rl-banner.info{background:#0d3b36;color:#99f6e4;border-color:#115e59}
+.rl-chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;background:#f1f5f9;color:#334155;margin:0 4px 4px 0}
+.rl-chip.red{background:#fee2e2;color:#991b1b}
+.rl-chip.amber{background:#fef3c7;color:#92400e}
+.rl-chip.teal{background:#ccfbf1;color:#115e59}
+body.dark .rl-chip{background:#2b3a55;color:#cbd5e1}
+.rl-resumen{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:10px 12px;font-size:12.5px;margin-bottom:14px;line-height:1.5}
+body.dark .rl-resumen{background:#0b1220;border-color:#2b3a55}
+.rl-flag{display:inline-flex;align-items:center;gap:6px;margin-left:6px;background:#fef3c7;color:#92400e;border:1px solid #fbbf24;font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;vertical-align:middle}
+
+/* ===== panel ===== */
+#rl-panel{position:fixed;inset:0;z-index:2147483002;display:none;background:rgba(15,23,42,.55);align-items:center;justify-content:center;padding:16px}
+#rl-panel.rl-on{display:flex}
+#rl-panel .rl-box{background:#fff;color:var(--rl-ink);border-radius:16px;max-width:660px;width:100%;max-height:84vh;overflow:auto;padding:20px 22px;font-size:14px;line-height:1.5}
+body.dark #rl-panel .rl-box{background:#16213a;color:#e2e8f0}
+#rl-panel h3{margin:0 0 6px;font-size:17px}
+#rl-panel table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+#rl-panel td{padding:6px 8px;border-bottom:1px solid #e2e8f0;vertical-align:top}
+#rl-panel td:first-child{font-weight:600;width:42%}
+body.dark #rl-panel td{border-color:#2b3a55}
+.rl-pill{display:inline-block;padding:1px 9px;border-radius:999px;font-size:11px;font-weight:700}
+.rl-pill.ok{background:#d1fae5;color:#065f46}.rl-pill.no{background:#fee2e2;color:#991b1b}.rl-pill.mid{background:#fef3c7;color:#92400e}
+
+/* ===== impresión ===== */
+#rl-print-head,#rl-print-foot{display:none}
+@media print{
+  :where(nav,footer,.no-print,#rl-toasts,#rl-evi,#rl-panel,#searchOverlay){display:none!important}
+  #rl-print-head{display:block;border-bottom:2px solid #000;padding-bottom:8px;margin-bottom:14px;font-size:11px;color:#000}
+  #rl-print-foot{display:block;border-top:1px solid #94a3b8;margin-top:16px;padding-top:6px;font-size:10px;color:#334155}
+  body,body.dark{background:#fff!important;color:#000!important}
+  :where(canvas,svg){max-width:100%!important}
+  .card{break-inside:avoid}
+  @page{margin:15mm}
+}

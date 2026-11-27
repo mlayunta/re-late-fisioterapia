@@ -1,0 +1,29 @@
+{
+  "id": "./",
+  "name": "Re-Late · Fisioterapia",
+  "short_name": "Re-Late",
+  "description": "Gestión clínica y prescripción de ejercicio terapéutico. Prototipo de demostración con datos ficticios. Autor: Miguel Ángel Layunta López.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0f766e",
+  "theme_color": "#0f766e",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["medical", "health", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Panel clínico", "short_name": "Panel", "url": "./index.html#dashboard", "description": "Estadísticas, citas de hoy y alertas" },
+    { "name": "Pacientes", "short_name": "Pacientes", "url": "./index.html#patients", "description": "Historia clínica electrónica" },
+    { "name": "Agenda", "short_name": "Agenda", "url": "./index.html#agenda", "description": "Citas y recordatorios" },
+    { "name": "Cardiometabólico", "short_name": "Cardio", "url": "./index.html#cardio", "description": "Zonas, constantes, pruebas y escalas" }
+  ]
+}
