@@ -1,5 +1,5 @@
 /* =======================================================================
-   Re-Late · Fisioterapia — service worker v3 (modo sin conexión)
+   Re-Late · Fisioterapia — service worker v4 (modo sin conexión)
    Estrategia:
      navegaciones ... network-first con respaldo en caché
      recursos ....... stale-while-revalidate (incluye el CDN)
@@ -8,7 +8,7 @@
    ======================================================================= */
 'use strict';
 
-var CACHE = 'relate-shell-v3';
+var CACHE = 'relate-shell-v4';
 var SHELL = ['./', './index.html', './manifest.json', './mejoras.css', './mejoras.js', './icon.svg'];
 var OPT = ['vendor/tailwind-3.4.16.js', 'vendor/chart-4.4.1.umd.min.js',
            'icon-192.png', 'icon-512.png', 'icon-180.png', 'icon-maskable-512.png'];
